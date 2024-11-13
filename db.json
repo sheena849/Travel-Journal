@@ -8,19 +8,11 @@
       "budget": "2500"
     },
     {
-      "id": "2",
-      "destination": "Rome, Italy",
-      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmqKNw85ZAEhHivTeO8Mo_Mk6vNf3ydFHdTA&s",
-      "description": "Every street in Rome felt like stepping back in time. I was in awe of the Colosseum’s grandeur, the grandeur of the Vatican, and the enchanting fountains that filled the piazzas. Wandering through Trastevere, with its cobblestone streets and lively cafes, showed me Rome’s playful spirit.",
-      "budget": "2500",
-      "status": "Already Travelled"
-    },
-    {
       "id": "4",
       "destination": "London, UK",
-      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3NGGZ7wMoaysOE56iVlqDKmk9qdt5SnOIKw&s",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYj1m005VW2o4JKo4izPsyiD14ybWVgyU_BO1Bx5uWZLVzIpy5VE7Dzrz_MS29MzOFN5Y&usqp=CAU",
       "description": "From the regal Buckingham Palace to the vibrant market stalls in Camden, London was a blend of history and modern life. Walking along the Thames with Big Ben in view, I felt part of the city’s rich tapestry. I found hidden corners of the city that only locals knew, and each neighborhood offered something new.",
-      "budget": "2000",
+      "budget": "2500",
       "status": "Already Travelled",
       "rating": 4.7
     },
@@ -56,7 +48,7 @@
       "destination": "Sydney, Australia",
       "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNIJjRdWS9bBUcC0DVTa3t6C763xlvakNCvA&s",
       "description": "Sydney is a stunning coastal city known for its iconic sights and laid-back beach vibes. The Sydney Opera House and Harbour Bridge are a must-see, especially at sunset over the sparkling harbor. Bondi Beach is perfect for soaking up the sun, while the Royal Botanic Gardens offer a peaceful escape. With an exciting food scene, vibrant neighborhoods like The Rocks, and ferry rides to Manly, Sydney is a dream city to explore.",
-      "budget": "2500 USD",
+      "budget": "5000",
       "status": "Already Travelled"
     },
     {
@@ -65,7 +57,7 @@
       "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3f5ljXg4UX784wQ1Wy8dNdRKKqAtpdcdnmcffiN_AnagfeRM6eL6rnfVbuJV8zrcJecs&usqp=CAU",
       "description": "Wandering through the vibrant streets of New York, I couldn’t help but be captivated by the towering skyscrapers and the endless buzz of energy. Times Square dazzled at night, while a serene moment in Central Park felt like stepping into another world. I loved the blend of iconic sights and hidden gems in each neighborhood.",
       "budget": "3500",
-      "status": "Wishlist"
+      "status": "Already Travelled"
     },
     {
       "id": "10",
@@ -81,7 +73,7 @@
       "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFCW2viqnxskkvHs3EKWh0gY0_XfdcFxznH8j68YhRwZdvWNUtR6iNmLluiEzSaLw542E&usqp=CAU",
       "description": "Tokyo is a vibrant mix of ancient traditions and cutting-edge modernity. From exploring the serene Meiji Shrine and historic Asakusa district to marveling at the neon-lit streets of Shibuya and Shinjuku, Tokyo offers something captivating at every corner. The city's food scene is incredible, from sushi at the Tsukiji Outer Market to local ramen shops. With endless attractions, beautiful gardens, and futuristic skyscrapers, Tokyo is an adventure waiting to be experienced.",
       "budget": "2800 USD",
-      "status": "Wishlist"
+      "status": "Already Travelled"
     },
     {
       "id": "12",
@@ -105,7 +97,7 @@
       "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU2zwD7yYu7zZDppPvuIgc8U2cpcB41nk1CA&s",
       "description": "Toronto is a diverse city offering a perfect blend of urban life and nature. I'd explore the iconic CN Tower, where the views of the city and Lake Ontario are mesmerizing. The Royal Ontario Museum offers fascinating cultural insights, while the vibrant Distillery District is filled with art galleries, shops, and restaurants. Toronto is a city where cultures collide, and there's always something to do, whether it's enjoying nature at High Park or experiencing the bustling downtown.",
       "budget": "2600 USD",
-      "status": "Wishlist"
+      "status": "Already Travelled"
     },
     {
       "id": "15",
@@ -119,6 +111,30 @@
       "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHTW2kqtrPHtD9v2Gurx6PTEIA24OGGBLuTpdUy18RmABVFX3KYu8TxPRLlMN7qk3ZwKQ&usqp=CAU",
       "description": " Nairobi, a vibrant city where urban life meets wildlife adventure. Home to the famous Nairobi National Park, you can experience safaris just minutes from the city center. With its lively markets, rich culture, and bustling streets, Nairobi is perfect for those seeking both excitement and relaxation. Whether it's exploring local art, savoring delicious cuisine, or immersing in nature, Nairobi offers a unique and unforgettable experience.",
       "budget": "3000",
+      "status": "Wishlist"
+    },
+    {
+      "id": "9196",
+      "destination": "South Korea",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj1AdPARrwVfn7QXjMjO1j9RdB2e6jerY6FA&s",
+      "description": "South Korea is a captivating blend of rich history, modern innovation, and breathtaking landscapes. From the lively streets of Seoul, where tradition meets cutting-edge technology, to the peaceful nature of Jeju Island with its volcanic beaches and lush mountains, the country offers something for everyone. Whether you’re exploring ancient palaces and temples in Gyeongju, enjoying the coastal beauty of Busan, or immersing yourself in vibrant city life, South Korea promises an unforgettable journey filled with unique experiences, delicious cuisine, and warm hospitality.",
+      "budget": "3000",
+      "status": "Wishlist"
+    },
+    {
+      "id": "eac9",
+      "destination": "Paris, France",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTevLk8xhvqcZliIt_5f3AQ3jAtcweG3vgw4g&s",
+      "description": "Strolling along the Seine and admiring the timeless beauty of the Eiffel Tower was pure magic. Paris felt like an endless gallery, with charming streets lined with cafes, art museums, and quaint bookshops. I lost myself in the romance of Montmartre, where each corner held a touch of classic Parisian charm",
+      "budget": "2500",
+      "status": "Already Travelled"
+    },
+    {
+      "id": "39f9",
+      "destination": "Florida",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVLmAynk2-8W0UfCATlPyIor_Vh2r-LTZLEQ&s",
+      "description": "Florida, known as the Sunshine State, is famous for its beautiful beaches, vibrant cities, and thrilling theme parks. From the magical world of Disney in Orlando to the stunning coastlines of Miami and the Keys, there's something for everyone. Whether you're seeking adventure, relaxation, or natural beauty, Florida offers it all. With year-round warm weather, it's the perfect destination for a getaway",
+      "budget": "3500",
       "status": "Wishlist"
     }
   ]

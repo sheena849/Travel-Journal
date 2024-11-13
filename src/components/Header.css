@@ -1,22 +1,6 @@
-
 header {
-  background-color:grey; 
-  padding: 20px; 
-  text-align: center; 
-  color: white; 
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); 
-  border-radius: 0 0 10px 10px; 
+  text-align: center;
+  background-color: transparent; /* Transparent background */
+  padding: 20px;
 }
 
-
-header h1 {
-  margin: 0; 
-  font-size: 2.5rem; 
-  font-weight: bold;
-  font-family: 'Arial', sans-serif; 
-}
-
-header:hover {
-  background-color:grey; 
-  transition: background-color 0.3s ease; 
-}

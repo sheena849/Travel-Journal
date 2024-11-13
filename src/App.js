@@ -1,130 +1,163 @@
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import Search from './components/Search';
 import AlreadyTravelled from './components/AlreadyTravelled';
 import Wishlist from './components/Wishlist';
 import ErrorPage from './components/ErrorPage';
+import Navbar from './components/Navbar';
 import './App.css';
 
 const App = () => {
   const [entries, setEntries] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [error, setError] = useState(false);
+  const [noResults, setNoResults] = useState(false);
 
   useEffect(() => {
-    fetch('http://localhost:3000/entries')
-      .then((res) => {
+    const fetchEntries = async () => {
+      try {
+        const res = await fetch('http://localhost:3000/entries');
         if (!res.ok) throw new Error('Network response was not ok');
-        return res.json();
-      })
-      .then((data) => {
-        console.log('Fetched entries:', data);
+        const data = await res.json();
         setEntries(data);
-      })
-      .catch((err) => {
+      } catch (err) {
         console.error('Error fetching data:', err);
         setError(true);
-      });
+      }
+    };
+    fetchEntries();
   }, []);
 
   const handleSearch = (term) => {
     setSearchTerm(term);
-    console.log('Search term:', term);
+    const hasResults = entries.some(entry =>
+      entry.destination.toLowerCase().includes(term.toLowerCase())
+    );
+    setNoResults(!hasResults);
   };
 
-  const handleDelete = (id) => {
-    console.log('Deleting entry with id:', id);
-    fetch(`http://localhost:3000/entries/${id}`, { method: 'DELETE' })
-      .then(() => {
-        setEntries(entries.filter((entry) => entry.id !== id));
-      })
-      .catch((err) => {
-        console.error('Error deleting entry:', err);
-        setError(true);
-      });
+  const handleDelete = async (id) => {
+    try {
+      await fetch(`http://localhost:3000/entries/${id}`, { method: 'DELETE' });
+      setEntries((prevEntries) => prevEntries.filter((entry) => entry.id !== id));
+    } catch (err) {
+      console.error('Error deleting entry:', err);
+      setError(true);
+    }
   };
 
-  const handleUpdate = (id, updatedEntry) => {
-    console.log('Updating entry with id:', id, 'to:', updatedEntry);
+  const handleUpdate = async (id, updatedFields) => {
     const entryToUpdate = entries.find((entry) => entry.id === id);
-    const updatedData = {
-      ...entryToUpdate,
-      description: updatedEntry.description,
-      budget: updatedEntry.budget,
-    };
+    if (!entryToUpdate) return;
 
-    fetch(`http://localhost:3000/entries/${id}`, {
-      method: 'PUT',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(updatedData),
-    })
-      .then((res) => res.json())
-      .then((updatedData) => {
-        setEntries((prevEntries) =>
-          prevEntries.map((entry) =>
-            entry.id === id ? updatedData : entry
-          )
-        );
-      })
-      .catch((err) => {
-        console.error('Error updating entry:', err);
-        setError(true);
+    const updatedData = { ...entryToUpdate, ...updatedFields };
+
+    try {
+      const res = await fetch(`http://localhost:3000/entries/${id}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(updatedData),
       });
+      const updatedEntry = await res.json();
+      setEntries((prevEntries) =>
+        prevEntries.map((entry) => (entry.id === id ? updatedEntry : entry))
+      );
+    } catch (err) {
+      console.error('Error updating entry:', err);
+      setError(true);
+    }
   };
 
-  const handlePost = (newEntry) => {
-    console.log('Posting new entry:', newEntry);
-    fetch('http://localhost:3000/entries', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ ...newEntry, status: 'Wishlist' }),
-    })
-      .then((res) => res.json())
-      .then((postedEntry) => {
-        setEntries([...entries, postedEntry]);
-      })
-      .catch((err) => {
-        console.error('Error posting entry:', err);
-        setError(true);
+  const handlePost = async (newEntry) => {
+    try {
+      const res = await fetch('http://localhost:3000/entries', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...newEntry, status: 'Wishlist' }),
       });
+      const postedEntry = await res.json();
+      setEntries((prevEntries) => [...prevEntries, postedEntry]);
+    } catch (err) {
+      console.error('Error posting entry:', err);
+      setError(true);
+    }
   };
 
   const handleMoveToTravelled = (id) => {
-    console.log('Moving entry with id:', id, 'to Travelled');
-    const entryToUpdate = entries.find((entry) => entry.id === id);
-    const updatedEntry = { ...entryToUpdate, status: 'Already Travelled' };
-    handleUpdate(id, updatedEntry);
+    handleUpdate(id, { status: 'Already Travelled' });
   };
 
   if (error) return <ErrorPage />;
 
+  const filteredEntries = (status) =>
+    entries.filter(
+      (entry) =>
+        entry.status === status &&
+        entry.destination.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+
   return (
-    <div>
-      <Header />
-      <Search onSearch={handleSearch} />
-      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-        <AlreadyTravelled
-          entries={entries.filter(
-            (entry) =>
-              entry.status === 'Already Travelled' &&
-              entry.destination.toLowerCase().includes(searchTerm.toLowerCase())
-          )}
-          onDelete={handleDelete}
-          onUpdate={handleUpdate}
-        />
-        <Wishlist
-          entries={entries.filter(
-            (entry) =>
-              entry.status === 'Wishlist' &&
-              entry.destination.toLowerCase().includes(searchTerm.toLowerCase())
-          )}
-          onPost={handlePost}
-          onDelete={handleDelete}
-          onUpdate={handleUpdate}
-          onMoveToTravelled={handleMoveToTravelled}
-        />
+    <Router>
+      <div className="app-container">
+        <div className="header-navbar-container">
+          <Header />
+          <Navbar /> {/* Navbar component */}
+        </div>
+        <Search onSearch={handleSearch} noResults={noResults} setNoResults={setNoResults} />
+        {noResults && <div className="no-results">No destination found...</div>}
+
+        {/* Use a grid to display Already Travelled and Wishlist in 3 columns */}
+        <Routes>
+          <Route path="/" element={
+            <>
+              <div className="columns-container">
+                <div className="column">
+                  <AlreadyTravelled
+                    entries={filteredEntries('Already Travelled')}
+                    onDelete={handleDelete}
+                    onUpdate={handleUpdate}
+                  />
+                </div>
+                <div className="column">
+                  <Wishlist
+                    entries={filteredEntries('Wishlist')}
+                    onPost={handlePost}
+                    onDelete={handleDelete}
+                    onUpdate={handleUpdate}
+                    onMoveToTravelled={handleMoveToTravelled}
+                  />
+                </div>
+              </div>
+            </>
+          } />
+          <Route path="/wishlist" element={
+            <div className="columns-container">
+              <div className="column">
+                <Wishlist
+                  entries={filteredEntries('Wishlist')}
+                  onPost={handlePost}
+                  onDelete={handleDelete}
+                  onUpdate={handleUpdate}
+                  onMoveToTravelled={handleMoveToTravelled}
+                />
+              </div>
+            </div>
+          } />
+          <Route path="/already-travelled" element={
+            <div className="columns-container">
+              <div className="column">
+                <AlreadyTravelled
+                  entries={filteredEntries('Already Travelled')}
+                  onDelete={handleDelete}
+                  onUpdate={handleUpdate}
+                />
+              </div>
+            </div>
+          } />
+        </Routes>
       </div>
-    </div>
+    </Router>
   );
 };
 

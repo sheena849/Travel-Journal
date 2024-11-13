@@ -1,85 +1,66 @@
-/* Main container for the Already Travelled section */
 .already-travelled-container {
-  width: 60%; /* Increased width */
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto;
   padding: 20px;
   background-color: #fff;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 0 auto; /* Center the container */
-  display: flex;
-  flex-direction: column;
-  gap: 30px; /* Added gap between each travelled entry */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Title for Already Travelled */
 h2 {
   text-align: center;
-  font-size: 2rem;
-  color: #333;
   margin-bottom: 20px;
 }
 
-/* Styling for each entry in Already Travelled */
+.entries-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 20px;
+  justify-items: center;
+}
+
 .travelled-entry {
-  padding: 20px; /* Increased padding */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
   border: 1px solid #ddd;
   border-radius: 8px;
   background-color: #f9f9f9;
-  margin-bottom: 30px; /* Increased margin to ensure space between entries */
-  width: 100%; /* Allow entries to take full width */
-  max-width: 600px; /* Increased max width */
-  margin: 0 auto; /* Center each entry */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 300px;
 }
 
-/* Styling for image in each entry */
-.entry-image {
-  width: 100%; /* Full width within the entry */
-  height: auto; /* Automatic height to maintain aspect ratio */
-  max-height: 300px; /* Limit height for larger screens */
+.travelled-entry img {
+  width: 100%;
+  height: 220px;
   object-fit: cover;
-  border-radius: 10px; /* Round the corners slightly */
-  padding: 5px; /* Padding for visual separation */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  background-color: #f9f9f9; /* Background for padding area */
+  border-radius: 5px;
 }
 
-/* Details container for each entry */
-.entry-details {
-  display: flex;
-  flex-direction: column;
-  gap: 15px; /* Increased gap between details */
+.travelled-entry h3 {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 10px;
 }
 
-/* Individual container for each detail */
-.container {
-  margin-bottom: 20px; /* Increased margin below each detail container */
-}
-
-.container h3 {
-  margin: 0;
-  font-weight: bold;
-  font-size: 1.2rem; /* Increased font size */
-  color: #333;
-}
-
-/* Button container for delete and update actions */
 .button-container {
   display: flex;
   justify-content: space-between;
-  gap: 15px; /* Increased gap between buttons */
+  gap: 10px;
 }
 
-/* General button styling */
 button {
-  padding: 10px 15px; /* Increased padding */
-  font-size: 1rem; /* Increased font size */
+  padding: 8px 12px;
+  font-size: 14px;
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
   cursor: pointer;
   width: 48%;
 }
 
-/* Delete button styling */
 .delete-button {
   background-color: #f44336;
   color: white;
@@ -89,35 +70,67 @@ button {
   background-color: #e53935;
 }
 
-/* Update button styling */
-.update-button {
+.edit-button {
   background-color: #ff9800;
   color: white;
 }
 
-.update-button:hover {
+.edit-button:hover {
   background-color: #fb8c00;
 }
 
-/* Responsive design adjustments */
+.edit-section {
+  margin-top: 20px;
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.edit-section h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+textarea,
+input[type="number"],
+input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+textarea {
+  height: 100px;
+}
+
+.save-button {
+  background-color: #4caf50;
+  color: white;
+}
+
+.save-button:hover {
+  background-color: #45a049;
+}
+
+.cancel-button {
+  background-color: #999;
+  color: white;
+}
+
+.cancel-button:hover {
+  background-color: #777;
+}
+
+/* Make sure layout is responsive */
 @media (max-width: 768px) {
-  .already-travelled-container {
-    width: 100%;
-    padding: 15px;
+  .entries-container {
+    grid-template-columns: 1fr 1fr; /* 2 columns for smaller screens */
   }
 
   .travelled-entry {
-    width: 100%;
-    margin-bottom: 15px;
-  }
-
-  .button-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  button {
-    width: 100%;
-    margin-bottom: 10px;
+    max-width: 100%;
   }
 }

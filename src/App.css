@@ -36,3 +36,31 @@
     transform: rotate(360deg);
   }
 }
+/* Header and Navbar container */
+.header-navbar-container {
+  display: flex;
+  justify-content: center; /* Center the header */
+  align-items: center; /* Center vertically */
+  width: 100%;
+}
+
+/* Header styles */
+header {
+  text-align: center;
+  background-color: transparent; /* Transparent background */
+  padding: 20px;
+  flex-grow: 1; /* Allow header to grow */
+}
+
+/* Navbar styles */
+.navbar-container {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 20px;
+}
+
+.navbar {
+  background-color: #007bff; /* Blue background for navbar */
+  padding: 10px 20px;
+  border-radius: 5px;
+}

@@ -1,4 +1,3 @@
-
 .search-container {
   width: 100%;
   max-width: 600px; 
@@ -7,7 +6,6 @@
   display: flex;
   justify-content: center;
 }
-
 
 .search-container input {
   width: 100%; 
@@ -20,14 +18,46 @@
   outline: none; 
 }
 
-
 .search-container input:focus {
   border-color: #4caf50; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
-
 .search-container input::placeholder {
   color: #aaa; 
   font-style: italic;
 }
+.no-results {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+  font-style: italic;
+}
+.clear-btn {
+  background-color: #ff5c5c;
+  color: white;
+  border: none;
+  border-radius: 15px; /* Make the button rounder */
+  padding: 5px 10px; /* Adjust the padding for a smaller button */
+  cursor: pointer;
+  font-size: 0.9rem; /* Reduce the font size */
+  margin-left: 10px; /* Keep the left margin */
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.clear-btn:hover {
+  background-color: #e04646;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+

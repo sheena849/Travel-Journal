@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './Wishlist.css';
-
 const Wishlist = ({ entries, onPost, onDelete, onUpdate, onMoveToTravelled }) => {
   const [newEntry, setNewEntry] = useState({
     destination: '',
@@ -16,18 +15,12 @@ const Wishlist = ({ entries, onPost, onDelete, onUpdate, onMoveToTravelled }) =>
   };
 
   const handleAdd = () => {
-    if (newEntry.destination && newEntry.imageUrl && newEntry.description && newEntry.budget) {
-      console.log('Adding new entry:', newEntry);
-      onPost(newEntry); // Post the new entry to the parent component
-      setNewEntry({ destination: '', imageUrl: '', description: '', budget: '' });
-    } else {
-      alert('Please fill in all fields before adding.');
-    }
+    onPost(newEntry);
+    setNewEntry({ destination: '', imageUrl: '', description: '', budget: '' });
   };
 
   const handleEdit = (entry) => {
-    console.log('Editing entry:', entry);
-    setEditing(entry.id); // Set the current entry as being edited
+    setEditing(entry.id);
     setNewEntry({
       destination: entry.destination,
       imageUrl: entry.imageUrl,
@@ -37,14 +30,9 @@ const Wishlist = ({ entries, onPost, onDelete, onUpdate, onMoveToTravelled }) =>
   };
 
   const handleUpdate = () => {
-    if (newEntry.destination && newEntry.imageUrl && newEntry.description && newEntry.budget) {
-      console.log('Updating entry with id:', editing, 'to:', newEntry);
-      onUpdate(editing, newEntry); // Call the parent update function with the edited entry
-      setEditing(null); // Reset the editing state
-      setNewEntry({ destination: '', imageUrl: '', description: '', budget: '' });
-    } else {
-      alert('Please fill in all fields before updating.');
-    }
+    onUpdate(editing, newEntry);
+    setEditing(null);
+    setNewEntry({ destination: '', imageUrl: '', description: '', budget: '' });
   };
 
   return (
@@ -93,15 +81,9 @@ const Wishlist = ({ entries, onPost, onDelete, onUpdate, onMoveToTravelled }) =>
             <p>{entry.description}</p>
             <p>Budget: ${entry.budget}</p>
             <div className="button-container">
-              <button onClick={() => {
-                console.log('Deleting entry with id:', entry.id);
-                onDelete(entry.id);
-              }}>Delete</button>
+              <button onClick={() => onDelete(entry.id)}>Delete</button>
               <button onClick={() => handleEdit(entry)}>Edit</button>
-              <button onClick={() => {
-                console.log('Moving to Travelled for entry id:', entry.id);
-                onMoveToTravelled(entry.id);
-              }}>
+              <button onClick={() => onMoveToTravelled(entry.id)}>
                 Move to Travelled
               </button>
             </div>
