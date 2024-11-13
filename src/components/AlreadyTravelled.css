@@ -1,0 +1,123 @@
+/* Main container for the Already Travelled section */
+.already-travelled-container {
+  width: 60%; /* Increased width */
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 auto; /* Center the container */
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* Added gap between each travelled entry */
+}
+
+/* Title for Already Travelled */
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Styling for each entry in Already Travelled */
+.travelled-entry {
+  padding: 20px; /* Increased padding */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  margin-bottom: 30px; /* Increased margin to ensure space between entries */
+  width: 100%; /* Allow entries to take full width */
+  max-width: 600px; /* Increased max width */
+  margin: 0 auto; /* Center each entry */
+}
+
+/* Styling for image in each entry */
+.entry-image {
+  width: 100%; /* Full width within the entry */
+  height: auto; /* Automatic height to maintain aspect ratio */
+  max-height: 300px; /* Limit height for larger screens */
+  object-fit: cover;
+  border-radius: 10px; /* Round the corners slightly */
+  padding: 5px; /* Padding for visual separation */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  background-color: #f9f9f9; /* Background for padding area */
+}
+
+/* Details container for each entry */
+.entry-details {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Increased gap between details */
+}
+
+/* Individual container for each detail */
+.container {
+  margin-bottom: 20px; /* Increased margin below each detail container */
+}
+
+.container h3 {
+  margin: 0;
+  font-weight: bold;
+  font-size: 1.2rem; /* Increased font size */
+  color: #333;
+}
+
+/* Button container for delete and update actions */
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px; /* Increased gap between buttons */
+}
+
+/* General button styling */
+button {
+  padding: 10px 15px; /* Increased padding */
+  font-size: 1rem; /* Increased font size */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 48%;
+}
+
+/* Delete button styling */
+.delete-button {
+  background-color: #f44336;
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: #e53935;
+}
+
+/* Update button styling */
+.update-button {
+  background-color: #ff9800;
+  color: white;
+}
+
+.update-button:hover {
+  background-color: #fb8c00;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  .already-travelled-container {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .travelled-entry {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .button-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}

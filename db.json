@@ -1,0 +1,125 @@
+{
+  "entries": [
+    {
+      "id": "1",
+      "destination": "Paris, France",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTevLk8xhvqcZliIt_5f3AQ3jAtcweG3vgw4g&s",
+      "description": "Strolling along the Seine and admiring the timeless beauty of the Eiffel Tower was pure magic. Paris felt like an endless gallery, with charming streets lined with cafes, art museums, and quaint bookshops. I lost myself in the romance of Montmartre, where each corner held a touch of classic Parisian charm",
+      "budget": "2500"
+    },
+    {
+      "id": "2",
+      "destination": "Rome, Italy",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmqKNw85ZAEhHivTeO8Mo_Mk6vNf3ydFHdTA&s",
+      "description": "Every street in Rome felt like stepping back in time. I was in awe of the Colosseum’s grandeur, the grandeur of the Vatican, and the enchanting fountains that filled the piazzas. Wandering through Trastevere, with its cobblestone streets and lively cafes, showed me Rome’s playful spirit.",
+      "budget": "2500",
+      "status": "Already Travelled"
+    },
+    {
+      "id": "4",
+      "destination": "London, UK",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3NGGZ7wMoaysOE56iVlqDKmk9qdt5SnOIKw&s",
+      "description": "From the regal Buckingham Palace to the vibrant market stalls in Camden, London was a blend of history and modern life. Walking along the Thames with Big Ben in view, I felt part of the city’s rich tapestry. I found hidden corners of the city that only locals knew, and each neighborhood offered something new.",
+      "budget": "2000",
+      "status": "Already Travelled",
+      "rating": 4.7
+    },
+    {
+      "id": "5",
+      "destination": "Rio de Janeiro, Brazil",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6-hIm5x-cBpYXYLkjNHPOtV63JfslwsN0sn-SRkX4P0adcIyDklJs5dNoZq8tdKinork&usqp=CAU",
+      "description": "Rio was pure energy and color, with lively music and breathtaking scenery. Standing at the base of Christ the Redeemer was humbling, and the views from Sugarloaf Mountain were unreal. Copacabana Beach buzzed with life, and I found joy in every samba beat and smile.",
+      "budget": "1700 USD",
+      "status": "Already Travelled",
+      "rating": 4.6
+    },
+    {
+      "id": "6",
+      "destination": "Barcelona, Spain",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLH_poMR8imSwxvSAqUCQa_LO9D5VZWxSpgg&s",
+      "description": "Barcelona was a feast for the senses, with Gaudi’s whimsical architecture giving the city a unique charm. La Sagrada Familia took my breath away, and wandering through the Gothic Quarter felt like a medieval adventure. Sunsets on the beach were a perfect way to end the day.",
+      "budget": "2400 USD",
+      "status": "Already Travelled",
+      "rating": 4.9
+    },
+    {
+      "id": "7",
+      "destination": "Cape Town, South Africa",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDG2D-NcswHqsiENuathCvkdBRZnhrNKAXZw&s",
+      "description": "Cape Town’s beauty left me speechless. From the top of Table Mountain, I could see the city, sea, and sky merging in a stunning panorama. The beaches were pristine, and a trip to the Cape of Good Hope felt like standing at the world’s edge. The city was vibrant, with a mix of cultures and flavors that I’ll never forget.",
+      "budget": "2000 USD",
+      "status": "Already Travelled",
+      "rating": 4.8
+    },
+    {
+      "id": "8",
+      "destination": "Sydney, Australia",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNIJjRdWS9bBUcC0DVTa3t6C763xlvakNCvA&s",
+      "description": "Sydney is a stunning coastal city known for its iconic sights and laid-back beach vibes. The Sydney Opera House and Harbour Bridge are a must-see, especially at sunset over the sparkling harbor. Bondi Beach is perfect for soaking up the sun, while the Royal Botanic Gardens offer a peaceful escape. With an exciting food scene, vibrant neighborhoods like The Rocks, and ferry rides to Manly, Sydney is a dream city to explore.",
+      "budget": "2500 USD",
+      "status": "Already Travelled"
+    },
+    {
+      "id": "9",
+      "destination": "New York, USA",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3f5ljXg4UX784wQ1Wy8dNdRKKqAtpdcdnmcffiN_AnagfeRM6eL6rnfVbuJV8zrcJecs&usqp=CAU",
+      "description": "Wandering through the vibrant streets of New York, I couldn’t help but be captivated by the towering skyscrapers and the endless buzz of energy. Times Square dazzled at night, while a serene moment in Central Park felt like stepping into another world. I loved the blend of iconic sights and hidden gems in each neighborhood.",
+      "budget": "3500",
+      "status": "Wishlist"
+    },
+    {
+      "id": "10",
+      "destination": "Dubai, UAE",
+      "imageUrl": "https://fnst.axflare.com/community/JPEG/GBJQzJMoxn.jpeg",
+      "description": "Dubai is a futuristic city where innovation meets luxury. I'd love to visit the Burj Khalifa, the tallest building in the world, offering an incredible view of the skyline. The palm-shaped island of Palm Jumeirah is a unique engineering marvel, and the Dubai Mall, with its indoor aquarium and endless shopping, is a must-see. With its blend of traditional souks and modern skyscrapers, Dubai is a dynamic destination for both relaxation and adventure",
+      "budget": "3500 USD",
+      "status": "Wishlist"
+    },
+    {
+      "id": "11",
+      "destination": "Tokyo, Japan",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFCW2viqnxskkvHs3EKWh0gY0_XfdcFxznH8j68YhRwZdvWNUtR6iNmLluiEzSaLw542E&usqp=CAU",
+      "description": "Tokyo is a vibrant mix of ancient traditions and cutting-edge modernity. From exploring the serene Meiji Shrine and historic Asakusa district to marveling at the neon-lit streets of Shibuya and Shinjuku, Tokyo offers something captivating at every corner. The city's food scene is incredible, from sushi at the Tsukiji Outer Market to local ramen shops. With endless attractions, beautiful gardens, and futuristic skyscrapers, Tokyo is an adventure waiting to be experienced.",
+      "budget": "2800 USD",
+      "status": "Wishlist"
+    },
+    {
+      "id": "12",
+      "destination": "Athens, Greece",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPT6ldBlBb0VeEL-lSVulPcGW2FZMWHllEmQ&s",
+      "description": "Greece is a picturesque country known for its rich history, stunning landscapes, and beautiful islands. I’d visit the Acropolis in Athens, where ancient ruins meet breathtaking views of the city. The Greek islands, such as Santorini, offer stunning sunsets and white-washed buildings perched on cliffs. The crystal-clear waters and charming villages make Greece an ideal destination for both history lovers and those seeking relaxation by the sea.",
+      "budget": "2100 USD",
+      "status": "Wishlist"
+    },
+    {
+      "id": "13",
+      "destination": "Cairo, Egypt",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Cairo_From_Tower_%28cropped%29.jpg/278px-Cairo_From_Tower_%28cropped%29.jpg",
+      "description": "Cairo brims with history, offering a window into the wonders of ancient Egypt. The Pyramids of Giza and the Sphinx are awe-inspiring, their grandeur unforgettable against the desert backdrop. The bustling Khan El Khalili Bazaar overflows with treasures, from colorful spices to intricate crafts. The Nile River flows right through this lively city, where the blend of ancient and modern gives Cairo its captivating charm",
+      "budget": "2300 USD",
+      "status": "Wishlist"
+    },
+    {
+      "id": "14",
+      "destination": "Toronto, Canada",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU2zwD7yYu7zZDppPvuIgc8U2cpcB41nk1CA&s",
+      "description": "Toronto is a diverse city offering a perfect blend of urban life and nature. I'd explore the iconic CN Tower, where the views of the city and Lake Ontario are mesmerizing. The Royal Ontario Museum offers fascinating cultural insights, while the vibrant Distillery District is filled with art galleries, shops, and restaurants. Toronto is a city where cultures collide, and there's always something to do, whether it's enjoying nature at High Park or experiencing the bustling downtown.",
+      "budget": "2600 USD",
+      "status": "Wishlist"
+    },
+    {
+      "id": "15",
+      "destination": "Hong Kong",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTFz6ErhtqB5ihMoi0F5lUvSMu0IwOw5l_CDEWPxJxLa4BrI83yGE4DYW93ThfBvczXJg&usqp=CAU",
+      "description": "Hong Kong is a vibrant city where East meets West, offering a blend of modern skyscrapers and traditional markets. I'd visit Victoria Peak for a stunning view of the skyline, harbor, and surrounding mountains. The bustling streets of Mong Kok offer a unique shopping experience, while the starry nights on the harbor,"
+    },
+    {
+      "id": "6d0a",
+      "destination": "Nairobi , Kenya",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHTW2kqtrPHtD9v2Gurx6PTEIA24OGGBLuTpdUy18RmABVFX3KYu8TxPRLlMN7qk3ZwKQ&usqp=CAU",
+      "description": " Nairobi, a vibrant city where urban life meets wildlife adventure. Home to the famous Nairobi National Park, you can experience safaris just minutes from the city center. With its lively markets, rich culture, and bustling streets, Nairobi is perfect for those seeking both excitement and relaxation. Whether it's exploring local art, savoring delicious cuisine, or immersing in nature, Nairobi offers a unique and unforgettable experience.",
+      "budget": "3000",
+      "status": "Wishlist"
+    }
+  ]
+}
