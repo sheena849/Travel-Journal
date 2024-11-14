@@ -2,39 +2,34 @@ import React, { useState } from 'react';
 import './AlreadyTravelled.css';
 
 const AlreadyTravelled = ({ entries, onDelete, onUpdate }) => {
-  const [editingEntryId, setEditingEntryId] = useState(null);
   const [updatedFields, setUpdatedFields] = useState({
+    id: null,
     description: '',
     budget: '',
-    imageUrl: '',
+    imageUrl: ''
   });
 
-  const startEditing = (entry) => {
-    setEditingEntryId(entry.id);
+  const handleEdit = (entry) => {
     setUpdatedFields({
+      id: entry.id,
       description: entry.description,
       budget: entry.budget,
-      imageUrl: entry.imageUrl, // Set initial value for image URL
+      imageUrl: entry.imageUrl
     });
   };
 
-  const cancelEditing = () => {
-    setEditingEntryId(null);
-    setUpdatedFields({ description: '', budget: '', imageUrl: '' });
+  const handleDelete = (id) => {
+    onDelete(id);
   };
 
-  const handleUpdateChange = (e) => {
-    const { name, value } = e.target;
-    setUpdatedFields((prevFields) => ({
-      ...prevFields,
-      [name]: value,
-    }));
-  };
-
-  const handleUpdateSave = () => {
-    if (editingEntryId !== null) {
-      onUpdate(editingEntryId, updatedFields);
-      cancelEditing();
+  const handleUpdate = () => {
+    if (updatedFields.id) {
+      onUpdate(updatedFields.id, {
+        description: updatedFields.description,
+        budget: updatedFields.budget,
+        imageUrl: updatedFields.imageUrl
+      });
+      setUpdatedFields({ id: null, description: '', budget: '', imageUrl: '' });
     }
   };
 
@@ -44,51 +39,38 @@ const AlreadyTravelled = ({ entries, onDelete, onUpdate }) => {
       <div className="entries-container">
         {entries.map((entry) => (
           <div key={entry.id} className="travelled-entry">
-            <h3>{entry.destination}</h3>
             <img src={entry.imageUrl} alt={entry.destination} />
-            <p>Description: {entry.description}</p>
+            <h3>{entry.destination}</h3>
+            <p>{entry.description}</p>
             <p>Budget: ${entry.budget}</p>
-
             <div className="button-container">
-              <button onClick={() => onDelete(entry.id)} className="delete-button">
-                Delete
-              </button>
-              <button onClick={() => startEditing(entry)} className="edit-button">
-                Edit
-              </button>
+              <button className="delete-button" onClick={() => handleDelete(entry.id)}>Delete</button>
+              <button className="edit-button" onClick={() => handleEdit(entry)}>Edit</button>
             </div>
 
-            {editingEntryId === entry.id && (
+            {/* Edit Section */}
+            {updatedFields.id === entry.id && (
               <div className="edit-section">
                 <h4>Edit Entry</h4>
-                <textarea
-                  name="description"
+                <input
+                  type="text"
+                  placeholder="Updated Description"
                   value={updatedFields.description}
-                  onChange={handleUpdateChange}
-                  placeholder="Update description"
+                  onChange={(e) => setUpdatedFields({ ...updatedFields, description: e.target.value })}
                 />
                 <input
                   type="number"
-                  name="budget"
+                  placeholder="Updated Budget"
                   value={updatedFields.budget}
-                  onChange={handleUpdateChange}
-                  placeholder="Update budget"
+                  onChange={(e) => setUpdatedFields({ ...updatedFields, budget: e.target.value })}
                 />
                 <input
                   type="text"
-                  name="imageUrl"
+                  placeholder="Updated Image URL"
                   value={updatedFields.imageUrl}
-                  onChange={handleUpdateChange}
-                  placeholder="Update image URL"
+                  onChange={(e) => setUpdatedFields({ ...updatedFields, imageUrl: e.target.value })}
                 />
-                <div className="button-container">
-                  <button onClick={handleUpdateSave} className="save-button">
-                    Save
-                  </button>
-                  <button onClick={cancelEditing} className="cancel-button">
-                    Cancel
-                  </button>
-                </div>
+                <button className="save-button" onClick={handleUpdate}>Save</button>
               </div>
             )}
           </div>
@@ -99,4 +81,3 @@ const AlreadyTravelled = ({ entries, onDelete, onUpdate }) => {
 };
 
 export default AlreadyTravelled;
-

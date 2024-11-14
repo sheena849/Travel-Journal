@@ -102,12 +102,11 @@ const App = () => {
       <div className="app-container">
         <div className="header-navbar-container">
           <Header />
-          <Navbar /> {/* Navbar component */}
+          <Navbar />
         </div>
         <Search onSearch={handleSearch} noResults={noResults} setNoResults={setNoResults} />
         {noResults && <div className="no-results">No destination found...</div>}
 
-        {/* Use a grid to display Already Travelled and Wishlist in 3 columns */}
         <Routes>
           <Route path="/" element={
             <>
@@ -126,6 +125,7 @@ const App = () => {
                     onDelete={handleDelete}
                     onUpdate={handleUpdate}
                     onMoveToTravelled={handleMoveToTravelled}
+                    setEntries={setEntries} 
                   />
                 </div>
               </div>
@@ -140,6 +140,7 @@ const App = () => {
                   onDelete={handleDelete}
                   onUpdate={handleUpdate}
                   onMoveToTravelled={handleMoveToTravelled}
+                  setEntries={setEntries} // Passing setEntries correctly
                 />
               </div>
             </div>
